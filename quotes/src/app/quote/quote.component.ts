@@ -9,11 +9,11 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[]=[
-    {id:1, name:'Bite what you can Chew', author:'White.S Man'},
-    {id:2,name:'When the Deal is Too Good Think Twice',author:'Kenny Rodgers 1st'},
-    {id:3,name:'Haraka haraka haina Bahati',author:'Mhenga 001'},
-    {id:4,name:'Mganga hajigangi',author:'Wahenga '},
-    {id:5, name:'Dawa ya Deni ni Kulipa',author:'Okush Babaa '}
+    new Quote(1, 'Bite what you can Chew', 'White.S Man'),
+    new Quote(2,'When the Deal is Too Good Think Twice','Kenny Rodgers 1st'),
+    new Quote(3,'Haraka haraka haina Bahati','Mhenga 001'),
+    new Quote(4,'Mganga hajigangi','Wahenga '),
+    new Quote(5, 'Dawa ya Deni ni Kulipa','Okush Babaa ')
   ];
   constructor() { }
 

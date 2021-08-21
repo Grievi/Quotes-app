@@ -4,10 +4,13 @@
     <hr>
     <div>
        <ul>
-           <li *ngFor= 'let quote of quotes'>
-                {{quote.name}}
-                <app-quote-detail [quote]='quote'></app-quote-detail>
-           </li>           
+           <li *ngFor= 'let quote of quotes;let i =index'>
+            {{quote.name}}
+            </li>
+                
+            <button (click)='showDescription(i)'>More...</button>  
+            <app-quote-detail [quote]='quote'></app-quote-detail>
+                  
        </ul> 
        <p *ngIf='quotes.length > 4'>Add More custom Quotes</p>
     </div>
