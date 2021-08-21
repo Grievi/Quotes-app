@@ -1,14 +1,2 @@
-<div>
-    <h1>Quotes App</h1>
-    <p>Create Your own Quote and vote for it</p>
-    <hr>
-    <div>
-       <ul>
-           <li *ngFor= 'let quote of quotes'>
-                {{quote.name}}
-           </li>
-       </ul> 
-       <p *ngIf='quotes.length > 4'>Add More custom Quotes</p>
-    </div>
-</div>
+<app-quote></app-quote>
 
