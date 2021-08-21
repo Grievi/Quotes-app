@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Quotes';
+  // quote = 'Bite what You can Chew'
+  quotes: any [];
+
+  constructor(){
+    this.quotes = ['Bite what you can Chew','When the Deal is Too Good Think Twice','Haraka haraka haina Bahati']
+  }
 }
