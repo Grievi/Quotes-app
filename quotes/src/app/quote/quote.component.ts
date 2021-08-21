@@ -15,6 +15,9 @@ export class QuoteComponent implements OnInit {
     new Quote(4,'Mganga hajigangi','Wahenga '),
     new Quote(5, 'Dawa ya Deni ni Kulipa','Okush Babaa ')
   ];
+  toggleDetails(index:number){
+    this.quotes[index].showDescription=!this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {

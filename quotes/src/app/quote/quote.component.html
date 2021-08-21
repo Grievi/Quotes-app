@@ -8,8 +8,8 @@
             {{quote.name}}
             </li>
                 
-            <button (click)='showDescription(i)'>More...</button>  
-            <app-quote-detail [quote]='quote'></app-quote-detail>
+            <button (click)='toggleDetails(i)'>More...</button>  
+            <app-quote-detail *ngIf= 'quote.showDescription' [quote]='quote'></app-quote-detail>
                   
        </ul> 
        <p *ngIf='quotes.length > 4'>Add More custom Quotes</p>
