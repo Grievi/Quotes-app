@@ -1,19 +1,14 @@
 <div>
-    <h1>Quotes App</h1>
-    <p>Create Your own Quote and vote for it</p>
-    <hr>
-    <div>
-       <ul>
-           <li *ngFor= 'let quote of quotes;let i =index'>
-            {{quote.name}}
-           </li>    
-            <button (click)='toggleDetails(i)'>More...</button>  
-            <app-quote-detail *ngIf= 'quote.showDescription'    [quote]='quote'></app-quote-detail>
-                  
-       </ul> 
-       <p *ngIf='quotes.length > 4'>Add More custom Quotes</p>
-    </div>
+    <h1>Inspirational Quotes Bazokizo</h1>
+    <p>Welcome to Inspirations, where you create your quote and motivate users</p>
+    <ul>
+      <li *ngFor = 'let quote of quotes; let i=index'>
+        {{quote.name}} <br>
+        <button (click)='toggleDetails(i)'>Toggle Details</button>
+        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isComplete)='completeQuote($event,i)'></app-quote-detail>
+    </li>
+    </ul>
+    <p *ngIf='quotes.length > 5'>You can Create More Quotes and We will vote for it!</p>
 </div>
-
 
 
