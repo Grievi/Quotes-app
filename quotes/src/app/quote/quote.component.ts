@@ -25,6 +25,16 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index,1)
     }
   }
+  numberOfLikes:number=0;
+
+  likeButtonClick(){
+    this.numberOfLikes++;
+  }
+
+  disLikeButtonClick(){
+    this.numberOfLikes--;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
