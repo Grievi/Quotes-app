@@ -7,7 +7,7 @@ import {Quote} from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-
+  
   quotes:Quote[]=[
     new Quote(1, 'Bite what you can Chew', 'White.S Man'),
     new Quote(2,'When the Deal is Too Good Think Twice','Kenny Rodgers 1st'),

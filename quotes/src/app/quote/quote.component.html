@@ -6,10 +6,9 @@
        <ul>
            <li *ngFor= 'let quote of quotes;let i =index'>
             {{quote.name}}
-            </li>
-                
+           </li>    
             <button (click)='toggleDetails(i)'>More...</button>  
-            <app-quote-detail *ngIf= 'quote.showDescription' [quote]='quote'></app-quote-detail>
+            <app-quote-detail *ngIf= 'quote.showDescription'    [quote]='quote'></app-quote-detail>
                   
        </ul> 
        <p *ngIf='quotes.length > 4'>Add More custom Quotes</p>
