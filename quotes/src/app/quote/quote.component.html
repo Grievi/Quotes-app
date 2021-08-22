@@ -1,20 +1,30 @@
-<div>
+<div class="container-fluid">
     <h1>Inspirational Quotes Bazokizo</h1>
     <p>Welcome to Inspirations, where you create your quote and motivate users</p>
-    <ul>
-        <div *ngFor = 'let quote of quotes; let i=index'>
-            <li appHighlight> {{quote.name}} </li>
-            <p>Posted on {{quote.completeDate | date}}</p>
-                <br>
-                <p>{{numberOfLikes}}</p>
-                <button (click)='likeButtonClick()'>like </button>
-                <button (click)='disLikeButtonClick()'>dislike </button>
-                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isComplete)='completeQuote($event,i)'></app-quote-detail>
-                <button (click)='toggleDetails(i)'>Toggle Details</button>
-               
-            
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <ul>
+                    <div *ngFor = 'let quote of quotes; let i=index'>
+                        <li appHighlight> {{quote.name}} </li>
+                        <p>Posted on {{quote.completeDate | date}}</p>
+                            <br>
+                            <p>{{numberOfLikes}}</p>
+                            <button (click)='likeButtonClick()'>like </button>
+                            <button (click)='disLikeButtonClick()'>dislike </button>
+                            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isComplete)='completeQuote($event,i)'></app-quote-detail>
+                            <button (click)='toggleDetails(i)'>Toggle Details</button>
+                           
+                        
+                    </div>
+                </ul>
+            </div>
         </div>
-    </ul>
+    </div>
+   
+
+   
     <p *ngIf='quotes.length > 5'>You can Create More Quotes and We will vote for it!</p>
 </div>
 
