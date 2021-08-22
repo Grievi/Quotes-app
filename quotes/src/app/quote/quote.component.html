@@ -3,7 +3,8 @@
     <p>Welcome to Inspirations, where you create your quote and motivate users</p>
     <ul>
         <div *ngFor = 'let quote of quotes; let i=index'>
-            <li > {{quote.name}}</li>
+            <li appHighlight> {{quote.name}} </li>
+            <p>Posted on {{quote.completeDate | date}}</p>
                 <br>
                 <p>{{numberOfLikes}}</p>
                 <button (click)='likeButtonClick()'>like </button>
