@@ -10,9 +10,9 @@
                         <li appHighlight> {{quote.name}} </li>
                         <p>Posted on {{quote.completeDate | date}}</p>
                             <br>
-                            <p>{{numberOfLikes}}</p>
-                            <button (click)='likeButtonClick()'>like </button>
-                            <button (click)='disLikeButtonClick()'>dislike </button>
+                            
+                            <button (click)='likeButtonClick()'>like {{numberOfLikes}} </button>
+                            <button (click)='disLikeButtonClick()'>dislike {{numberOfLikes}}</button><br>
                             <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isComplete)='completeQuote($event,i)'></app-quote-detail>
                             <button (click)='toggleDetails(i)'>Toggle Details</button>
                            
@@ -20,6 +20,7 @@
                     </div>
                 </ul>
             </div>
+            <app-quote-form></app-quote-form>
         </div>
     </div>
    
