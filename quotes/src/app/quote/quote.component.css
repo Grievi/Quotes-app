@@ -1,3 +1,38 @@
 li{
     list-style: none;
 }
+.wrapper{
+    background-image: linear-gradient(#fff,#A7AAB3,#988E85);
+    /* min-height: 100vh; */
+
+}
+.header{
+    background: url(../../assets/bg.jpg)fixed;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
+.welcome{
+    padding-top: 10vh;
+}
+.welcome h1{
+    font-weight: 900;
+    font-size:56px
+}
+.welcome p{
+    font-weight: bold;
+    font-size: 28px;
+}
+div a{
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+}
+.footer{
+    background: linear-gradient(#fff,#A7AAB3,#988E85);
+    width: 100%;
+    margin: 0;
+}
