@@ -11,10 +11,10 @@ export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
     new Quote(1, 'Haraka haraka haina baraka','Wahenga Wahenguzi',0,0,new Date(1900,8,10)),
    new Quote (2,'Pole pole ndio mwendo','Wagenge Wahenguzi',0,0,new Date(1910,5,17)),
-    new Quote(3,'Zubaa zuba utpata mwana si wako',' Wahenguzi Wenyewe',0,0,new Date(2007,11,11)),
-    new Quote(4,'Omba serikali Kazi','Msee wa Nduthi',0,0,new Date(2020,3,15)),
-    new Quote(5,'Mambo ya Stima wachia serikali','Meme Lord',0,0,new Date(2020,6,10)),
-   new Quote (6,'Nitakufinya','Wahengezoo',0,0,new Date(2021,1,10))
+    new Quote(3,'Zubaa zuba utpata mwana si wako',' Wahenguzi Wenyewe',79,10,new Date(2007,11,11)),
+    new Quote(4,'Omba serikali Kazi','Msee wa Nduthi',435,7,new Date(2020,3,15)),
+    new Quote(5,'Mambo ya Stima wachia serikali','Meme Lord',324,1,new Date(2020,6,10)),
+   new Quote (6,'Nitakufinya','Wahengezoo',537,4,new Date(2021,1,10))
    ];
 
 
@@ -44,7 +44,7 @@ export class QuoteComponent implements OnInit {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
     quote.completeDate = new Date(quote.completeDate)
-    this.quotes.push(quote);
+    this.quotes.unshift(quote);
   }
 
 
