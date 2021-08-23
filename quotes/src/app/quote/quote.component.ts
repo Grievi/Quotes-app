@@ -9,13 +9,14 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
   
   quotes:Quote[]=[
-    new Quote(1, 'Haraka haraka haina baraka','Wahenga Wahenguzi',new Date(1900,8,10)),
-   new Quote (2,'Pole pole ndio mwendo','Wagenge Wahenguzi',new Date(1910,5,17)),
-    new Quote(3,'Zubaa zuba utpata mwana si wako',' Wahenguzi Wenyewe',new Date(2007,11,11)),
-    new Quote(4,'Omba serikali Kazi','Msee wa Nduthi',new Date(2020,3,15)),
-    new Quote(5,'Mambo ya Stima wachia serikali','Meme Lord',new Date(2020,6,10)),
-   new Quote (6,'Nitakufinya','Wahengezoo',new Date(2021,1,10))
+    new Quote(1, 'Haraka haraka haina baraka','Wahenga Wahenguzi',0,0,new Date(1900,8,10)),
+   new Quote (2,'Pole pole ndio mwendo','Wagenge Wahenguzi',0,0,new Date(1910,5,17)),
+    new Quote(3,'Zubaa zuba utpata mwana si wako',' Wahenguzi Wenyewe',0,0,new Date(2007,11,11)),
+    new Quote(4,'Omba serikali Kazi','Msee wa Nduthi',0,0,new Date(2020,3,15)),
+    new Quote(5,'Mambo ya Stima wachia serikali','Meme Lord',0,0,new Date(2020,6,10)),
+   new Quote (6,'Nitakufinya','Wahengezoo',0,0,new Date(2021,1,10))
    ];
+
 
    toggleDetails(index:number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -29,15 +30,23 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index,1)
     }
   }
-  numberOfLikes:number=0;
+ 
 
-  likeButtonClick(){
-    this.numberOfLikes++;
+
+  likeButtonClick(index:any){
+    this.quotes[index].like++;
   }
 
-  disLikeButtonClick(){
-    this.numberOfLikes--;
+  disLikeButtonClick(index:any){
+    this.quotes[index].dislike++;
   }
+  addNewQuote(quote:any){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote);
+  }
+
 
   constructor() { }
 
