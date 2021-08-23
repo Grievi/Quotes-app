@@ -8,13 +8,13 @@ import {NgForm} from '@angular/forms'
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
-  newQuote = new Quote(0,"","",0,0,new Date());
+  newQuote = new Quote(0,"","","",0,0,new Date());
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote(f:NgForm){
     if(f.valid){
       this.addQuote.emit(this.newQuote);
-      this.newQuote = new Quote(0,"","",0,0,new Date())
+      this.newQuote = new Quote(0,"","","",0,0,new Date())
     }
     
       }

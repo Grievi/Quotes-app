@@ -9,12 +9,12 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
   
   quotes:Quote[]=[
-    new Quote(1, 'Kama unajinauo, vile unaji Nauo... Monchokaa','Wagenge Wa Kanairo',368,0,new Date(1900,8,10)),
-   new Quote (2,'Pole pole ndio mwendo','Wahenga Wahenguzi',0,0,new Date(1910,5,17)),
-    new Quote(3,'Zubaa zuba utapata mwana si wako',' Wahenguzi Wenyewe',7,10,new Date(2007,11,11)),
-    new Quote(4,'Omba serikali Kazi','Msee wa Nduthi',435,7,new Date(2020,3,15)),
-    new Quote(5,'Mambo ya Stima wachia serikali','Meme Lord',324,1,new Date(2020,6,10)),
-   new Quote (6,'Nitakufinya!','Frustrated Kenyan',537,4,new Date(2021,1,10))
+    new Quote(1, 'Kama unajinauo, vile unaji Nauo... Monchokaa','Wagenge Wa Kanairo', 'John Maina',0,0,new Date(1900,8,10)),
+   new Quote (2,'Pole pole ndio mwendo','Wahenga Wahenguzi','Abdalla Said',0,0,new Date(1910,5,17)),
+    new Quote(3,'Zubaa zuba utapata mwana si wako',' Wahenguzi Wenyewe','Ogopa Mubaba',0,0,new Date(2007,11,11)),
+    new Quote(4,'Omba serikali Kazi','Msee wa Nduthi','Clarkson',0,0,new Date(2020,3,15)),
+    new Quote(5,'Mambo ya Stima wachia serikali','Meme Lord','Daniel Muchoki',0,0,new Date(2020,6,10)),
+   new Quote (6,'Nitakufinya!','Frustrated Kenyan','Missy Elliot',0,0,new Date(2021,1,10))
    ];
 
 

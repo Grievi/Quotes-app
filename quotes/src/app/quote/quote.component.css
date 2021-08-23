@@ -11,7 +11,7 @@ li{
     height: 70vh;
     background-size: cover;
     background-position: center;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
 }
 .welcome{
@@ -31,8 +31,16 @@ div a{
     font-weight: bold;
 
 }
+.like:hover{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition-delay: 30ms;
+    animation: reverse;
+    transition: smooth;
+}
 .footer{
     background: linear-gradient(#fff,#A7AAB3,#988E85);
-    width: 100%;
-    margin: 0;
+    min-height: 5%;
+
 }

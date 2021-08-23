@@ -24,7 +24,7 @@
                 <p>Description is required</p>
               </div>
           </div>
-          <div class="form-group">
+          <div class="form-group me-5">
     
               <label for="complete">Posted on</label>
               <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
@@ -32,6 +32,14 @@
                 <p>Date is required</p>
               </div>
           </div>
+          <div class="form-group">
+    
+            <label for="description">User Name</label>
+            <input type="text" class="form-control" id="user" [(ngModel)]="newQuote.user" name="user" #user="ngModel" required>
+            <div [hidden]="user.valid || user.pristine" class="alert alert-danger">
+              <p>User Name is required</p>
+            </div>
+        </div>
           <button type="submit" class="btn btn-success">Generate Your Quote</button>
       </form>
       </div>

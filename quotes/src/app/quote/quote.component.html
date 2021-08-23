@@ -1,39 +1,38 @@
 <div class="container-fluid header">
+    <h1></h1>
   <div style="color:white" class="text-center welcome">
-    <h1>QuoteMe</h1>
-    <p>Welcome to QuoteMe!, <br> where you create your Quote,<br> Inspire, Motivate and have fun!</p>
+    <h1>MtaaniQuote</h1>
+    <p>Welcome to MtaaniQuote!, <br> where you create your Quote,<br> Inspire, Motivate and have fun too!</p>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Generate Your Quote
     </button>
   </div>
 </div>
-
-
 <div class=" container-fluid wrapper">
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-3 col-sm-12 mt-5" *ngFor='let quote of quotes; let i=index'>
         <div class="card mb-3">
           <div class="card-header">
-            QuoteMe
+            {{quote.user}} posted
           </div>
           <div class="card-body">
-            <h5 class="card-title"> {{quote.name}} </h5>
-            <p class="card-text">Posted on {{quote.completeDate | date}}</p>
-            <div class="d-flex justify-content-between mb-2">
-              <p><img (click)='likeButtonClick(i)' src="../../assets/thumb-up-female-emoticon-vector-15501930.jpg"
-                  alt="like" height="30px" width="30px">{{quote.like}}</p>
-              <p><img (click)='disLikeButtonClick(i)' src="../../assets/thumbsdown.jpeg" alt="dislike" height="30px"
-                  width="30px">{{quote.dislike}}</p>
+                <h4 class="card-title"> "{{quote.name}}" </h4>
+                <p class="card-text">Posted on {{quote.completeDate | date}}</p>
+                <div class="d-flex justify-content-between mb-2">
+                  <p><img class="like" (click)='likeButtonClick(i)' src="../../assets/thumb-up-female-emoticon-vector-15501930.jpg"
+                      alt="like" height="30px" width="30px">{{quote.like}}</p>
+                  <p><img class="like" (click)='disLikeButtonClick(i)' src="../../assets/thumbsdown.jpeg" alt="dislike" height="30px"
+                      width="30px">{{quote.dislike}}</p>
 
-            </div>
-            <hr>
-            <div class="text-center">
-              <button class="btn btn-secondary" (click)='toggleDetails(i)'>More...</button>
-            </div>
-            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event,i)'>
-            </app-quote-detail>
+                </div>
+                <hr>
+                <div class="text-center">
+                  <button class="btn btn-secondary" (click)='toggleDetails(i)'>More...</button>
+                </div>
+                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event,i)'>
+             </app-quote-detail>
           </div>
         </div>
 
@@ -41,18 +40,21 @@
 
     </div>
   </div>
-  <div  class="footer">
-    <div class="row text-center">
-        <div class="col-md-4 col-sm-12 col-lg-3">
-            <a href="#">FAQs</a> 
-        </div>
-        <div class="col-md-4 col-sm-12 col-lg-3">
-            <a href="#">Quick Links</a> 
-        </div>
-        <div class="col-md-4 col-sm-12 col-lg-3">
-            <a href="#">Contact Us</a> 
+</div>
+    <div  class="footer">
+        <div class="row text-center">
+            <div class="col-md-4 col-sm-12 col-lg-3">
+                <a href="#">FAQs</a> 
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-3">
+                <a href="#">Quick Links</a> 
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-3">
+                <a href="#">Contact Us</a> 
+            </div>
         </div>
     </div>
+    
 <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
 
