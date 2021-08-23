@@ -7,7 +7,7 @@ li{
 
 }
 .header{
-    background: url(../../assets/bg.jpg)fixed;
+    background: url('../../assets/bg.jpg')fixed;
     height: 70vh;
     background-size: cover;
     background-position: center;
