@@ -44,7 +44,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Angular CLI 12
  
  ## Live Link
- Live link available https://grievi.github.io/Quotes-app/
+ Live link available https://gallant-brahmagupta-0931db.netlify.app/
  ## Project Preview
  * Homepage
 ![home](https://user-images.githubusercontent.com/85165180/130562100-d6caf8aa-e38b-4980-9341-33734176384a.png)
