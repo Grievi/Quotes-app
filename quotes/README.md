@@ -47,13 +47,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  Live link available https://grievi.github.io/Quotes-app/
  ## Project Preview
  * Homepage
- <img src="quotes/scr/assets/screenshots/home.png" height="300px">
+![home](https://user-images.githubusercontent.com/85165180/130562100-d6caf8aa-e38b-4980-9341-33734176384a.png)
+
 
   * Quotes 
-  <img src="/quotes/scr/assets/screenshots/form.png" height="300px">
+  ![quotes](https://user-images.githubusercontent.com/85165180/130562136-911657b7-33c4-4321-8a7c-113f1043e80b.png)
+
 
   * Create Quotes form 
-  <img src="quotes/scr/assets/screenshots/quotes.png" height="300px">
+ ![form](https://user-images.githubusercontent.com/85165180/130562165-325d8625-e46a-4b6a-a274-571f4dac8b55.png)
+
 
 
 ## Known Bugs
